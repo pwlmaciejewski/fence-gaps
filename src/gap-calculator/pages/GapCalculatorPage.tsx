@@ -20,29 +20,35 @@ export default function GapCalculatorPage() {
   });
 
   return (
-    <div className="m-auto max-w-80 flex flex-col gap-3">
-      <FormField label="Board width [mm]">
-        <NumberInput
-          value={boardWidth}
-          onChange={(event) => setBoardWidth(parseFloat(event.target.value))}
-        />
-      </FormField>
-      <FormField label="Min. gap size [mm]">
-        <NumberInput
-          value={minGapSize}
-          onChange={(event) => setMinGapSize(parseFloat(event.target.value))}
-        />
-      </FormField>
-      <FormField label="Fence width [cm]">
-        <NumberInput
-          value={fenceWidth}
-          onChange={(event) => setFenceWidth(parseFloat(event.target.value))}
-        />
-      </FormField>
+    <div className="m-auto max-w-80 mt-4">
+      <div className="mb-8 flex flex-col gap-3">
+        <FormField label="Board width [mm]">
+          <NumberInput
+            value={boardWidth}
+            onChange={(event) => setBoardWidth(parseFloat(event.target.value))}
+          />
+        </FormField>
+        <FormField label="Min. gap size [mm]">
+          <NumberInput
+            value={minGapSize}
+            onChange={(event) => setMinGapSize(parseFloat(event.target.value))}
+          />
+        </FormField>
+        <FormField label="Fence width [cm]">
+          <NumberInput
+            value={fenceWidth}
+            onChange={(event) => setFenceWidth(parseFloat(event.target.value))}
+          />
+        </FormField>
+      </div>
 
-      <div className="bg-gray-100 p-4">
-        <div>Number of boards: {numOfBoards}</div>
-        <div>Gap size: {gapSize.toFixed(2)} mm</div>
+      <div className="bg-gray-100 py-3 px-4 rounded-lg">
+        <div>
+          Number of boards: <strong>{numOfBoards}</strong>
+        </div>
+        <div>
+          Gap size: <strong>{gapSize.toFixed(2)} mm</strong>
+        </div>
       </div>
     </div>
   );

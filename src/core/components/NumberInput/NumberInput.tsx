@@ -10,7 +10,7 @@ export function NumberInput({ className, ...props }: NumberInputProps) {
   return (
     <input
       {...props}
-      className={clsx(className, "border px-2 py-1")}
+      className={clsx(className, "border px-2 py-1 rounded-sm")}
       type="number"
     />
   );
