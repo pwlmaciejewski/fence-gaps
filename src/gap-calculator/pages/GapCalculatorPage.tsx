@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from "react";
+import { useState } from "react";
 import { NumberInput } from "../../core/components/NumberInput/NumberInput";
 import { FormField } from "../../core/components/FormField/FormField";
 

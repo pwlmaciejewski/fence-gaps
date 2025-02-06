@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { HTMLAttributes, InputHTMLAttributes } from "react";
+import { InputHTMLAttributes } from "react";
 
 export type NumberInputProps = Omit<
   InputHTMLAttributes<HTMLInputElement>,
